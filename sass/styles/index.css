@@ -1,0 +1,45 @@
+button {
+  color: aqua;
+  background-color: black;
+}
+
+button:hover {
+  background-color: burlywood;
+}
+
+/* SCSS - can import other scss files add apply styles eg: button*/
+/* can create variables*/
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  -ms-grid-columns: 10% 90%;
+      grid-template-columns: 10% 90%;
+  grid-gap: 1%;
+}
+
+.child1 {
+  color: red;
+  height: 100px;
+  background-color: lightblue;
+  /* using variables*/
+  border: 1px solid black;
+  /* can create a mixin/func block contatin set of styles*/
+  /* using funcSample()*/
+}
+
+.child2 {
+  color: red;
+  background-color: lightblue;
+  /* using variables*/
+}
+
+.child3 {
+  font-family: tahoma;
+  /* can create a mixin/func block contatin set of styles and also pass value dynamically*/
+  /* usage funcWithParam by passing value*/
+  color: red;
+  background-color: lightblue;
+}
+/*# sourceMappingURL=index.css.map */

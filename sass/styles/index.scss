@@ -1,0 +1,39 @@
+@import './header.scss'; /* SCSS - can import other scss files add apply styles eg: button*/
+
+@mixin funcSample {          
+   border: 1px solid black;    /* can create a mixin/func block contatin set of styles*/
+}
+
+@mixin funcWithParam($fontStyle) {
+   font-family: $fontStyle;   /* can create a mixin/func block contatin set of styles and also pass value dynamically*/
+}
+
+$intialColor:red;  /* can create variables*/
+$backgroudColor: lightblue;
+
+
+.wrapper {
+   display: grid;
+   height: 100vh;
+   width: 100%;
+   grid-template-columns: 10% 90%;
+   grid-gap: 1%;
+}
+
+.child1{
+   color: $intialColor;
+   height: 100px;
+   background-color: $backgroudColor; /* using variables*/
+   @include funcSample(); /* using funcSample()*/
+}
+
+.child2 {
+   color: $intialColor;
+   background-color: $backgroudColor; /* using variables*/
+}
+
+.child3 {
+   @include funcWithParam(tahoma); /* usage funcWithParam by passing value*/
+   color: $intialColor;
+   background-color: $backgroudColor;
+}
